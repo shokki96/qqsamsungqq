@@ -29,4 +29,5 @@ Route::group([
     CRUD::resource('pagead', 'PageAdCrudController');
     CRUD::resource('page', 'PageCrudController');
     CRUD::resource('programme', 'ProgrammeCrudController');
+    CRUD::resource('sample', 'SampleCrudController');
 }); // this should be the absolute last line of this file
