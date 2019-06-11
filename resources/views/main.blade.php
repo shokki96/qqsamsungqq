@@ -46,16 +46,16 @@
                 <div class="col-12 form-wrap pl-4 pr-5">
                     <h1 class="py-2" style="font-weight: bold; font-size: 50px">Не упусти свой шанс!</h1>
                     <h3 class="pb-4">Купи любой S10 и получи J260 в подарок</h3>
-                <h3 class="pb-4">
-                @if(!empty($result) && count($result)>0)
-                 {{$result }}
-                @endif
-                </h3>
                     <form action="{{route('index')}}" id="s-form">
                         <input style="background: none; font-size: 24px; padding-bottom: 10px; width: 100%; border-color: #000000; border-radius: 200px"
                             type="text" class="form-control" placeholder="Проверь свой телефон на участие" name = "q">
                         <a id="a-submit"><i class="icon-magnifier"></i></a>
                     </form>
+                    @if(!empty($result) && count($result)>0)
+                    <h3 class="pb-4 pt-4">
+                     {{$result }}
+                    </h3>
+                    @endif
                 </div>
                 <div class="col-12 form-footer" style="margin-bottom: 30px">
                     <img src="{{ asset('assets/img/one-year.png')}}">

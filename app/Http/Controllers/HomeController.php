@@ -29,9 +29,9 @@ class HomeController extends Controller
         $search = Sample::where('imei','like',"$q");
         // dd($search);
         if(!empty($search) && $search->count()>0)
-            $result = 'Yarysha gatnashyaaaaaaaannnnnn';
+            $result = 'Поздравляю ваш телефон может участвовать в акции  '.$q;
         else{
-            $result = 'Yarysha Gatnashanooooooook';
+            $result = 'К сожалению Ваш телефон с другого региона   '.$q;
         }
         return view('main')->with([
             'title' => 'Samsung',
