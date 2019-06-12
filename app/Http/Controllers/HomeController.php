@@ -28,9 +28,9 @@ class HomeController extends Controller
         $q = $request['q'];
         $search = Sample::where('imei','like',"$q");
         if(!empty($search) && $search->count()>0)
-            $result = 'Поздравляю ваш телефон может участвовать в акции  '.$q;
+            $result = 'Поздравляю ваш телефон может участвовать в акции  <br>'.'<b style = "color: #002d76;font-weight: inherit;">'.$q.'</b>';
         else{
-            $result = 'К сожалению Ваш телефон с другого региона   '.$q;
+            $result = 'К сожалению Ваш телефон с другого региона  <br>'.'<b style = "color: #002d76;font-weight: inherit;">'.$q.'</b>';
         }
         return view('main')->with([
             'title' => 'Samsung',

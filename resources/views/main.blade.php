@@ -51,7 +51,7 @@
                         <a id="a-submit"><i class="icon-magnifier"></i></a>
                     </form>
                     @if(!empty($result) && count($result)>0)
-                    <p class="form-message">{{$result }}</p>
+                    <p class="form-message">{!! $result !!}</p>
                     @endif
                 </div>
                 <div class="col-12 form-footer first" style="margin-bottom: 50px">
