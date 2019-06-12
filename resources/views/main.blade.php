@@ -38,32 +38,33 @@
 </nav>
 <!-- end of navbar -->
 
-<!-- content -->
 <section id="main-page-content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-7 main-left-part px-5">
-                <div class="col-12 form-wrap pl-4 pr-5">
+                <div class="col-12 form-wrap pl-4 pr-5 after-click">
                     <h1 class="py-2" style="font-weight: bold; font-size: 50px">Не упусти свой шанс!</h1>
                     <h3 class="pb-4">Купи любой S10 и получи J260 в подарок</h3>
                     <form action="{{route('index')}}" id="s-form">
                         <input style="background: none; font-size: 24px; padding-bottom: 10px; width: 100%; border-color: #000000; border-radius: 200px"
-                            type="text" class="form-control" placeholder="Проверь свой телефон на участие" name = "q">
+                        type="text" class="form-control" placeholder="Проверь свой телефон на участие" name = "q">
                         <a id="a-submit"><i class="icon-magnifier"></i></a>
                     </form>
                     @if(!empty($result) && count($result)>0)
-                    <h3 class="pb-4 pt-4">
-                     {{$result }}
-                    </h3>
+                    <p class="form-message">{{$result }}</p>
                     @endif
                 </div>
-                <div class="col-12 form-footer" style="margin-bottom: 30px">
+                <div class="col-12 form-footer first" style="margin-bottom: 50px">
                     <img src="{{ asset('assets/img/one-year.png')}}">
                     <p class="">Период акции: 07.06.2019 - 30.06.2019</p>
                 </div>
             </div>
-            <div class="col-lg-5 main-right-part">
+            <div class="col-lg-5 main-right-part after-click">
                 <img src="{{ asset('assets/img/phones.png')}}" width="100%">
+                <div class="col-12 form-footer second">
+                    <img src="{{ asset('assets/img/one-year.png')}}">
+                    <p class="">Период акции: 07.06.2019 - 30.06.2019</p>
+                </div>
             </div>
         </div>
     </div>

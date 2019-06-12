@@ -26,6 +26,13 @@ nav.navbar{
 
 #navbarLinks li{
   display: inline-block;
+  line-height: 0.5;
+  padding-left: 15px;
+}
+
+#navbarLinks li:nth-child(1), #navbarLinks li:nth-child(2){
+  border-right: 4px solid #000000;
+  padding-right: 15px;
 }
 
 #navbarLinks > ul{
@@ -46,6 +53,17 @@ nav.navbar{
 
 #a-submit{
   color: #000000;
+}
+
+#a-submit:hover, #a-submit:focus{
+  text-decoration: none;
+}
+
+.form-message{
+  padding-top: 10px;
+  color: #3c68af;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .form-footer img{
@@ -82,6 +100,10 @@ nav.navbar{
   font-size: 20px;
 }
 
+.form-footer.second{
+  display: none;
+}
+
 @media only screen and (max-width: 991px){
   .navbar-brand{
     margin: auto;
@@ -100,12 +122,8 @@ nav.navbar{
     display: block;
   }
 
-  .form-footer{
-    bottom: -900px !important;
-  }
-
   .main-right-part{
-    top: 1000px;
+    top: 265px;
   }
 
   .main-left-part{
@@ -118,4 +136,73 @@ nav.navbar{
     }
   }
 
+  #navbarLinks{
+    margin-top: 20px;
+  }
+
+  nav.navbar{
+    border-bottom: 1px solid #000000;
+    padding-bottom: 40px !important;
+    padding-top: 40px !important;
+  }
+
+  #Rectangle_1{
+    height: 200% !important;
+  }
+
+  .form-footer.second{
+    display: block;
+    z-index: 10;
+    bottom: 110px;
+    text-align: center;
+    p{
+      font-size: 22px;
+    }
+  }
+
+  .form-footer.first{
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 768px){
+  .form-footer.second{
+    bottom: 70px;
+  }
+
+  .form-wrap.after-click{
+    padding-top: 30px;
+  }
+}
+
+#s-form input:focus{
+  box-shadow: none;
+  border: 2px solid #000000;
+}
+
+@media only screen and (max-width: 600px) {
+  #navbarLinks li a{
+    font-size: 30px;
+  }
+
+  .form-wrap.after-click{
+    padding-top: 150px;
+  }
+
+  .main-right-part.after-click{
+    padding-top: 130px;
+  }
+
+  .form-wrap{
+    padding-top: 40px;
+  }
+
+  .form-footer.second{
+    bottom: 30px;
+  }
+
+  .main-right-part{
+    padding-top: 30px;
+  }
 }

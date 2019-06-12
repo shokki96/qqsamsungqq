@@ -27,7 +27,6 @@ class HomeController extends Controller
         $request = \request();
         $q = $request['q'];
         $search = Sample::where('imei','like',"$q");
-        // dd($search);
         if(!empty($search) && $search->count()>0)
             $result = 'Поздравляю ваш телефон может участвовать в акции  '.$q;
         else{
@@ -35,7 +34,7 @@ class HomeController extends Controller
         }
         return view('main')->with([
             'title' => 'Samsung',
-            'result' => empty($q) ? '' : $result
+            'result' => empty($q) ? '' : $result,
         ]);
     }
 
